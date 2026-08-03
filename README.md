@@ -59,15 +59,35 @@ firmware-nya.
 
 1. Unduh `Notchi.dmg` dari [halaman Releases](https://github.com/epamemo/notchi/releases/latest).
 2. Buka .dmg, seret **Notchi.app** ke folder Applications.
-3. **Buka sekali dengan klik kanan → Buka**, lalu tekan *Buka* pada dialognya.
+3. Buka Notchi sekali. macOS akan menolaknya — ini yang diharapkan, lanjutkan
+   ke langkah 4.
+4. Buka **System Settings → Privacy & Security**, gulir ke bawah sampai
+   menemukan keterangan bahwa Notchi diblokir, tekan **Open Anyway**, lalu
+   masukkan kata sandi admin Anda.
 
-Langkah 3 penting dan hanya sekali. Notchi ditandatangani ad-hoc — belum ada
-sertifikat Apple Developer berbayar ($99/tahun) — jadi Gatekeeper tidak
-mengenali penandatangannya dan menolak buka-dobel biasa. Klik kanan → Buka
-adalah jalan resmi macOS untuk itu. Setelah sekali, buka seperti biasa.
+Hanya sekali. Sesudah itu Notchi dibuka seperti aplikasi lain.
 
-Bila dialognya terlanjur menolak, buka **System Settings → Privacy & Security**,
-gulir ke bawah, lalu tekan *Open Anyway*.
+**Kenapa serepot ini.** Notchi ditandatangani ad-hoc — belum ada sertifikat
+Apple Developer berbayar ($99/tahun), jadi aplikasinya tidak bisa dinotarisasi
+dan Gatekeeper tidak mengenali penandatangannya. Sejak macOS Sequoia (15), Apple
+[menghapus jalan pintas Control-klik → Buka](https://appleinsider.com/articles/24/08/06/apple-removes-control-click-option-for-skipping-gatekeeper)
+untuk aplikasi semacam ini, sehingga System Settings jadi satu-satunya jalan.
+
+> Di macOS 14 (Sonoma), cara lama masih berlaku: **klik kanan → Buka**, lalu
+> tekan *Buka* pada dialognya. Lebih singkat, tanpa kata sandi.
+
+### Setelah memperbarui Notchi
+
+Karena tanda tangan ad-hoc, macOS memperlakukan **setiap versi baru sebagai
+aplikasi yang berbeda**. Konsekuensinya, sesudah memasang pembaruan:
+
+- Langkah *Open Anyway* di atas diulang sekali.
+- Izin yang pernah Anda berikan (Screen Recording untuk Ice Bar, Accessibility
+  untuk susun ulang) **kembali kosong** dan perlu diberikan lagi. Entri lama
+  Notchi di System Settings boleh dihapus supaya tidak menumpuk.
+
+Setelan, kategori, dan daftar folder Anda **tidak** ikut hilang — itu tersimpan
+terpisah dari identitas aplikasi.
 
 ### Penyiapan awal
 
