@@ -9,8 +9,8 @@ dan pemantauan suhu.
 Di Mac tanpa notch, panelnya muncul sebagai pil mengambang di tengah atas layar.
 Perilakunya sama persis.
 
-> **Versi 0.9.0 — pra-rilis.** Bisa dipakai sehari-hari, tapi belum semua yang
-> direncanakan masuk. Yang belum ada disebutkan apa adanya di bawah.
+> **Versi 0.9.4.** Bisa dipakai sehari-hari. Yang belum ada disebutkan apa
+> adanya di bawah.
 
 <img src="gambar/01-diam.png" width="240" alt="Panel dalam keadaan diam, terlihat seperti notch asli">
 
@@ -142,7 +142,7 @@ di **Pengaturan → Umum**. Tidak ada telemetri, tidak ada akun.
 
 ---
 
-## Yang belum ada di 0.9.0
+## Yang belum ada
 
 Disebut di sini supaya tidak ada yang memasang lalu mencarinya:
 
