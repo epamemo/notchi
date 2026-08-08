@@ -55,9 +55,13 @@ firmware-nya.
 
 ## Pemasangan
 
-**Syarat:** macOS 14.0 (Sonoma) atau lebih baru. Apple Silicon dan Intel.
+**Syarat:** macOS 26 atau lebih baru. Apple Silicon dan Intel.
 
-1. Unduh `Notchi.dmg` dari [halaman Releases](https://github.com/epamemo/notchi/releases/latest).
+Pemakai macOS 14 (Sonoma) dan 15 (Sequoia) berhenti di
+[0.9.3](https://github.com/epamemo/notchi/releases/tag/v0.9.3), yang tetap
+tersedia dan tetap berfungsi.
+
+1. Unduh `Notchi.dmg` dari [halaman Releases](https://github.com/epamemo/notchi/releases).
 2. Buka .dmg, seret **Notchi.app** ke folder Applications.
 3. Buka Notchi sekali. macOS akan menolaknya — ini yang diharapkan, lanjutkan
    ke langkah 4.
@@ -67,27 +71,25 @@ firmware-nya.
 
 Hanya sekali. Sesudah itu Notchi dibuka seperti aplikasi lain.
 
-**Kenapa serepot ini.** Notchi ditandatangani ad-hoc — belum ada sertifikat
-Apple Developer berbayar ($99/tahun), jadi aplikasinya tidak bisa dinotarisasi
-dan Gatekeeper tidak mengenali penandatangannya. Sejak macOS Sequoia (15), Apple
+**Kenapa serepot ini.** Notchi ditandatangani dengan sertifikat Apple, tapi
+belum dinotarisasi — notarization menuntut akun Apple Developer berbayar
+($99/tahun) yang belum diambil. Sejak macOS Sequoia (15), Apple
 [menghapus jalan pintas Control-klik → Buka](https://appleinsider.com/articles/24/08/06/apple-removes-control-click-option-for-skipping-gatekeeper)
 untuk aplikasi semacam ini, sehingga System Settings jadi satu-satunya jalan.
 
-> Di macOS 14 (Sonoma), cara lama masih berlaku: **klik kanan → Buka**, lalu
-> tekan *Buka* pada dialognya. Lebih singkat, tanpa kata sandi.
-
 ### Setelah memperbarui Notchi
 
-Karena tanda tangan ad-hoc, macOS memperlakukan **setiap versi baru sebagai
-aplikasi yang berbeda**. Konsekuensinya, sesudah memasang pembaruan:
+**Tidak ada yang perlu diulang.** Unduh `.dmg` baru, seret ke Applications,
+timpa yang lama.
 
-- Langkah *Open Anyway* di atas diulang sekali.
-- Izin yang pernah Anda berikan (Screen Recording untuk Ice Bar, Accessibility
-  untuk susun ulang) **kembali kosong** dan perlu diberikan lagi. Entri lama
-  Notchi di System Settings boleh dihapus supaya tidak menumpuk.
+Versi sebelum 0.9.2 ditandatangani ad-hoc, dan itu membuat macOS memperlakukan
+tiap pembaruan sebagai aplikasi yang berbeda — izin privasi disetel ulang setiap
+kali. **Itu sudah tidak berlaku.** Sejak identitas penandatanganannya tetap:
 
-Setelan, kategori, dan daftar folder Anda **tidak** ikut hilang — itu tersimpan
-terpisah dari identitas aplikasi.
+- Langkah *Open Anyway* cukup sekali, tidak diulang tiap pembaruan.
+- Izin yang pernah Anda berikan **bertahan** — Kalender, Automation, Screen
+  Recording, Accessibility, dan Lokasi.
+- Setelan, kategori, dan daftar folder tidak pernah ikut hilang.
 
 ### Penyiapan awal
 
