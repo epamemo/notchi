@@ -61,47 +61,38 @@ Pemakai macOS 14 (Sonoma) dan 15 (Sequoia) berhenti di
 [0.9.3](https://github.com/epamemo/notchi/releases/tag/v0.9.3), yang tetap
 tersedia dan tetap berfungsi.
 
-1. Unduh `Notchi.dmg` dari [halaman Releases](https://github.com/epamemo/notchi/releases).
-2. Buka .dmg, seret **Notchi.app** ke folder Applications.
-3. Buka Notchi sekali. macOS akan menolaknya — ini yang diharapkan, lanjutkan
-   ke langkah 4.
-4. Buka **System Settings → Privacy & Security**, gulir ke bawah sampai
-   menemukan keterangan bahwa Notchi diblokir, tekan **Open Anyway**, lalu
-   masukkan kata sandi admin Anda.
+> **Jangan buka Notchi sebelum langkah 1–4 selesai.**
 
-Hanya sekali. Sesudah itu Notchi dibuka seperti aplikasi lain.
+**1.** Unduh `Notchi.dmg` dari [halaman Releases](https://github.com/epamemo/notchi/releases).
 
-### Alternatif lewat Terminal
+**2.** Buka `.dmg`, seret **Notchi.app** ke folder **Applications**.
 
-Satu perintah, tanpa System Settings. Jalankan **setelah** menyeret Notchi ke
-Applications dan **sebelum** membukanya:
+**3.** Buka **Terminal**, salin-tempel baris ini, lalu tekan Enter:
 
 ```bash
 xattr -rd com.apple.quarantine /Applications/Notchi.app
 ```
 
-Ini menghapus penanda "diunduh dari internet" yang dipakai Gatekeeper — sama
-seperti `--no-quarantine` di Homebrew. Tidak perlu `sudo`.
+**4.** Buka Notchi. Selesai — sekarang ia terbuka seperti aplikasi lain.
 
-**Kenapa serepot ini.** Notchi ditandatangani dengan sertifikat Apple, tapi
-belum dinotarisasi — notarization menuntut akun Apple Developer berbayar
-($99/tahun) yang belum diambil. Sejak macOS Sequoia (15), Apple
-[menghapus jalan pintas Control-klik → Buka](https://appleinsider.com/articles/24/08/06/apple-removes-control-click-option-for-skipping-gatekeeper)
-untuk aplikasi semacam ini, sehingga System Settings jadi satu-satunya jalan.
+**Kenapa perlu langkah 3.** Berkas yang diunduh dari internet ditandai
+*quarantine* oleh macOS, dan aplikasi bertanda itu ditahan saat pertama dibuka.
+Perintah tadi menghapus penandanya. Ini perlu karena Notchi belum dinotarisasi —
+notarization menuntut akun Apple Developer berbayar ($99/tahun) yang belum
+diambil.
+
+> **Tidak mau menyentuh Terminal?** Lewati langkah 3, buka Notchi, lalu saat
+> macOS menolaknya buka **System Settings → Privacy & Security** dan tekan
+> **Open Anyway**.
 
 ### Setelah memperbarui Notchi
 
-**Tidak ada yang perlu diulang.** Unduh `.dmg` baru, seret ke Applications,
-timpa yang lama.
+Unduh `.dmg` baru, seret ke Applications, timpa yang lama. **Ulangi langkah 3** —
+berkas yang baru diunduh ditandai *quarantine* lagi.
 
-Versi sebelum 0.9.2 ditandatangani ad-hoc, dan itu membuat macOS memperlakukan
-tiap pembaruan sebagai aplikasi yang berbeda — izin privasi disetel ulang setiap
-kali. **Itu sudah tidak berlaku.** Sejak identitas penandatanganannya tetap:
-
-- Langkah *Open Anyway* cukup sekali, tidak diulang tiap pembaruan.
-- Izin yang pernah Anda berikan **bertahan** — Kalender, Automation, Screen
-  Recording, Accessibility, dan Lokasi.
-- Setelan, kategori, dan daftar folder tidak pernah ikut hilang.
+Yang **tidak** perlu diulang: izin yang pernah Anda berikan (Kalender,
+Automation, Screen Recording, Accessibility, Lokasi) tetap berlaku, begitu juga
+setelan, kategori, dan daftar folder Anda.
 
 ### Penyiapan awal
 
