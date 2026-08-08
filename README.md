@@ -71,6 +71,35 @@ tersedia dan tetap berfungsi.
 
 Hanya sekali. Sesudah itu Notchi dibuka seperti aplikasi lain.
 
+### Alternatif lewat Terminal
+
+Bila Anda lebih suka satu perintah daripada membuka System Settings, jalankan
+ini **setelah** menyeret Notchi ke Applications dan **sebelum** membukanya:
+
+```bash
+xattr -rd com.apple.quarantine /Applications/Notchi.app
+```
+
+Sesudah itu Notchi langsung terbuka — tanpa Gatekeeper, tanpa System Settings.
+
+**Apa yang sebenarnya terjadi.** macOS menempelkan penanda
+`com.apple.quarantine` pada apa pun yang diunduh dari internet, dan Gatekeeper
+memakai penanda itu untuk memutuskan perlu-tidaknya memeriksa aplikasi saat
+pertama dibuka. Perintah di atas menghapus penandanya, jadi pemeriksaannya
+dilewati. Ini mekanisme yang sama persis dengan `--no-quarantine` milik Homebrew.
+
+**Yang Anda lepaskan, dan ini sengaja disebut.** Jalur *Open Anyway*
+memperlihatkan **apa** yang sedang Anda izinkan — nama aplikasinya tertulis, di
+antarmuka Apple sendiri. Perintah Terminal menyetujuinya tanpa Anda melihat apa
+pun. Untuk Notchi itu pertukaran yang wajar bila Anda memang berniat
+memasangnya; yang perlu diwaspadai adalah **polanya**, karena bentuk perintah
+yang sama berlaku untuk aplikasi apa pun dan beredar dengan nama yang tinggal
+diganti. Jangan menjalankannya untuk sesuatu yang asalnya tidak Anda percayai.
+
+> `sudo` tidak diperlukan. Aplikasi yang Anda seret sendiri ke `/Applications`
+> dimiliki akun Anda; banyak panduan menuliskannya dengan `sudo`, dan itu
+> memberi hak penuh yang tidak dipakai perintah ini.
+
 **Kenapa serepot ini.** Notchi ditandatangani dengan sertifikat Apple, tapi
 belum dinotarisasi — notarization menuntut akun Apple Developer berbayar
 ($99/tahun) yang belum diambil. Sejak macOS Sequoia (15), Apple
