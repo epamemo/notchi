@@ -61,6 +61,10 @@ Pemakai macOS 14 (Sonoma) dan 15 (Sequoia) berhenti di
 [0.9.3](https://github.com/epamemo/notchi/releases/tag/v0.9.3), yang tetap
 tersedia dan tetap berfungsi.
 
+> **Langkah 3 di bawah sifatnya sementara.** Begitu Notchi mengantongi lisensi
+> developer resmi Apple, pemasangannya jadi seperti aplikasi kebanyakan: seret
+> ke Applications, buka, sudah.
+
 > **Jangan buka Notchi sebelum langkah 1–4 selesai.**
 
 **1.** Unduh `Notchi.dmg` dari [halaman Releases](https://github.com/epamemo/notchi/releases).
@@ -77,9 +81,7 @@ xattr -rd com.apple.quarantine /Applications/Notchi.app
 
 **Kenapa perlu langkah 3.** Berkas yang diunduh dari internet ditandai
 *quarantine* oleh macOS, dan aplikasi bertanda itu ditahan saat pertama dibuka.
-Perintah tadi menghapus penandanya. Ini perlu karena Notchi belum dinotarisasi —
-notarization menuntut akun Apple Developer berbayar ($99/tahun) yang belum
-diambil.
+Perintah tadi menghapus penandanya.
 
 > **Tidak mau menyentuh Terminal?** Lewati langkah 3, buka Notchi, lalu saat
 > macOS menolaknya buka **System Settings → Privacy & Security** dan tekan
@@ -146,15 +148,14 @@ Disebut di sini supaya tidak ada yang memasang lalu mencarinya:
 
 - **Mengatur RPM kipas belum bisa.** Tab Sensor memantau suhu dan RPM, tapi
   belum ada cara mengunci kipas di kecepatan tertentu. Mengubah putaran kipas
-  hanya bisa dilakukan proses berhak istimewa, dan pemasangannya butuh
-  sertifikat Apple Developer berbayar supaya bisa satu klik. Ditunda ke versi
-  berikutnya, bukan dibuang.
+  hanya bisa dilakukan proses berhak istimewa. Ditunda ke versi berikutnya,
+  bukan dibuang.
 - **Kurva kipas berbasis sensor** (kipas mengikuti satu sensor) belum ada.
 - **Nama sensor di Apple Silicon sebagian masih mentah** (`Tg05`, `TCMz`, …).
   Peta nama yang beredar di internet terbukti salah di mesin uji — satu kunci
   yang katanya GPU membaca 9 °C saat mesin sibuk. Nama baru dipasang setelah
   ada bukti pembandingan sungguhan, bukan tebakan.
-- **Belum dinotarisasi**, karena itu ada langkah klik kanan → Buka di atas.
+- **Belum dinotarisasi**, karena itu ada langkah 3 di bagian Pemasangan.
 
 ## Diketahui bermasalah
 
