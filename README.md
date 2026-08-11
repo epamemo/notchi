@@ -66,6 +66,54 @@ Panel bisa **disematkan** (⌥⌘P) supaya tetap terbuka, dan **ditidurkan** (�
 saat sedang mengganggu — tidur selalu berakhir sendiri setelah waktu yang Anda
 pilih.
 
+### Tampilan tiap modul
+
+Semua tangkapan di bawah dari versi 0.9.5.
+
+**Dashboard** — kisi kartu, dengan deretan profil di kepalanya.
+
+<img src="gambar/02-dashboard.png" width="720" alt="Modul Dashboard pada profil Cepat: kartu Pintasan dan Sakelar Cepat">
+
+**Hari Ini** — garis waktu satu jalur berisi acara, tugas, dan penanda tidur.
+
+<img src="gambar/03-hari-ini.png" width="720" alt="Modul Hari Ini: garis waktu berisi tiga tugas dan penanda waktu tidur">
+
+**Rapikan** — folder yang dipantau, dan berkas lepas yang menunggu dirapikan.
+
+<img src="gambar/04-rapikan.png" width="720" alt="Modul Rapikan: 30 berkas lepas di Downloads, dengan tombol Pindai dan Rapikan Sekarang">
+
+**Menu Bar** — batas antara item yang terlihat dan yang disembunyikan, digeser dengan sekali klik.
+
+<img src="gambar/05-menu-bar.png" width="720" alt="Modul Menu Bar: 15 item terbaca, 9 akan disembunyikan, dengan pemisah biru yang bisa digeser">
+
+**Sensor** — suhu tiap sensor, keadaan termal mesin, dan RPM tiap kipas.
+
+<img src="gambar/06-sensor.png" width="720" alt="Modul Sensor: suhu tertinggi 68 derajat, sparkline, dan RPM dua kipas">
+
+**Sistem** — CPU, memori, penyimpanan, laju jaringan, dan baterai.
+
+<img src="gambar/07-sistem.png" width="720" alt="Modul Sistem: pemakaian CPU, memori, penyimpanan, laju jaringan, dan baterai">
+
+**Fokus** — tiga mode waktu; Pomodoro, stopwatch, dan alarm jam.
+
+<img src="gambar/08-fokus.png" width="720" alt="Modul Fokus pada mode Pomodoro, dengan pemilih tiga mode di atasnya">
+
+**Papan Klip** — riwayat salinan; perekamannya mati sampai Anda menyalakannya sendiri.
+
+<img src="gambar/09-papan-klip.png" width="720" alt="Modul Papan Klip dalam keadaan bawaan: belum ada yang disalin">
+
+**Rak** — berkas yang dijatuhkan ke notch, menunggu diseret ke tempat lain.
+
+<img src="gambar/10-rak.png" width="720" alt="Modul Rak dalam keadaan kosong">
+
+**Bluetooth** — perangkat yang dipasangkan dan baterainya, tanpa izin apa pun.
+
+<img src="gambar/11-bluetooth.png" width="720" alt="Modul Bluetooth: dua perangkat yang dipasangkan tapi sedang tidak tersambung">
+
+Tiap modul bisa dimatikan dan diurutkan ulang di **Pengaturan → Modul**:
+
+<img src="gambar/12-pengaturan.png" width="720" alt="Jendela Pengaturan halaman Modul: daftar sepuluh modul dengan centang dan pegangan seret">
+
 ---
 
 ## Pemasangan
